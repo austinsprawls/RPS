@@ -2,7 +2,7 @@ require 'rspec'
 require_relative '../lib/rps.rb'
 
 describe 'RPS::Player' do
-  let(:player) { RPS::Player.new(id: 1, username: 'danielcox', email: 'draycox@gmail.com' )}
+  let(:player) {RPS::Player.new(id: 1, username: 'danielcox', email: 'draycox@gmail.com' )}
 
   describe 'initialize' do
     it 'initializes an id' do
