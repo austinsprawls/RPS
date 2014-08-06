@@ -1,0 +1,86 @@
+<style>
+  *, *:before, *:after {
+    b
+  }
+</style>
+
+<div>
+  <h2>Get ready for WAR</h2>
+  <%= @params %>
+  </br>
+  </br>
+  <%= @password_digest %>
+  </br>
+  </br>
+  <p>signup params </p>
+  <%= @signup_params %>
+  
+  <% if @user %>
+    You are signed in as <%= @user.username %><br /><br />
+    <a class="btn btn-danger" role="button" href='/signout'>Sign Out</a>
+  <% else %>
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-default">
+    
+    <div class="panel-body">
+
+    	<form action="/signin" method="post">
+    	<div class="input-group">
+      		<span class="input-group-addon">Username:</span>
+      		<input type="text" class="form-control" placeholder="John_Smith" name="username">
+    	</div><br /><br />
+    	
+    	<div class="input-group">
+      		<span class="input-group-addon">Password:</span>
+      		<input type="password" class="form-control" placeholder="******" name="password">
+    	</div><br /><br />
+    	
+    	<input class="btn btn-default pull-left" role="button" type="submit" value="Sign In">
+    	</form>
+
+    </br>
+    </br>
+    </br>
+    </br>
+
+    <p>Not registered yet?</p>
+    <a class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-sm" role='button' >Join</a>
+    
+    </div>
+
+   </div>
+    
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      
+      <div class="modal-dialog modal-sm">
+        
+        <div class="modal-content">
+          
+          <form action="/signup" method="post">
+              <div class="input-group">
+                <span class="input-group-addon">Username:</span>
+                <input type="text" class="form-control" placeholder="John_Smith" name="username">
+              </div><br /><br />
+
+              <div class="input-group">
+                <span class="input-group-addon">Password:</span>
+                <input type="password" class="form-control" placeholder="******" name="password">
+              </div><br /><br />
+
+              <div class="input-group">
+                <span class="input-group-addon">Confirmation:</span>
+                <input type="password" class="form-control" placeholder="******" name="password_conf">
+              </div>
+              
+            
+            <input class="btn btn-default pull-left" role="button" type="submit" value="Join">
+          </form>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+</div>
+
