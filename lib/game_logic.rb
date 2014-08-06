@@ -1,19 +1,24 @@
 module RPS
+  module GameLogic
 
-  def game_over?
+  def self.game_over?
   end
 
-  def start_game
+  def self.start_game
   end
 
-  def restart_game
+  def self.restart_game
   end
 
-  def winning_move
+  def self.game_winner
   end
 
-  def game_winner
+  def self.winning_move(move1, move2,player1_id,player2_id)
+    return 'tie' if move1 == move2
+    (move1 == 'rock' && move2 == 'paper') || (move1 == 'scissors' && move2 == 'rock') ||
+    (move1 == 'paper' && move2 == 'scissors') ? player2_id : player1_id
   end
 
+  end
 
 end

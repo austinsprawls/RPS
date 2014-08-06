@@ -2,7 +2,7 @@ require 'rspec'
 require_relative '../lib/rps.rb'
 
 describe 'RPS::Game' do
-  let(:game) {RPS::Game.new(id: 1, player1_id: 2, player2_id: 3, winner: 3  )}
+  let(:game) {RPS::Game.new(id: 1, player1_id: 2, player2_id: 3, winner: nil  )}
 
   describe 'initialize' do
     it 'initializes an id' do
@@ -18,7 +18,7 @@ describe 'RPS::Game' do
     end
 
     it 'initializes a winner' do
-      expect(game.winner).to eq 3
+      expect(game.winner).to eq nil
     end
 
   end

@@ -6,7 +6,7 @@ module RPS
       @id = args[:id]
       @player1_id = args[:player1_id]
       @player2_id = args[:player2_id]
-      @winner = args[:winner]
+      @winner = nil
     end
   end
 end
